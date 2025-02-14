@@ -2,7 +2,7 @@
 
 ## Project Structure
 ```
-sql-injection-ctf/
+challange_SQLI/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── init.sql
@@ -18,7 +18,7 @@ sql-injection-ctf/
 1. Clone this repository:
 ```bash
 git clone [repository-url]
-cd sql-injection-ctf
+cd challange_SQLI
 ```
 
 2. Start the containers:
