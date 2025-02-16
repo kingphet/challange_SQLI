@@ -16,17 +16,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
     
-    // Vulnerable SQL query - intentionally unsafe for CTF
     $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
     $result = $conn->query($query);
     
     if ($result && $result->num_rows > 0) {
         $_SESSION['logged_in'] = true;
         $_SESSION['user_data'] = $result->fetch_assoc();
-        header('Location: dashboard.php');
+        echo "<h1>flag{SQL_Injection_1s_4w3s0me}</h1>";
         exit;
     } else {
-        header('Location: index.php?error=1');
+        echo "<h1>If you can't login you are gay</h1>";
         exit;
     }
 }
